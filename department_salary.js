@@ -5,13 +5,13 @@ const company = {
     
          {
     
-              departmentName: 'Engineering',
+              departmentName: "Engineering",
     
          employees: [
     
               {
     
-               name: 'Alice',
+               name: "Seth",
     
                     salary: 100000,
     
@@ -19,19 +19,22 @@ const company = {
     
                        {
     
-                         name: 'Bob',
+                         name: "Crum",
     
                            salary: 80000,
     
                          subordinates: [
-                                 {
     
-                                    name: 'Charlie',
+                       
+                    {
+                         name: "Harry",
     
-                                   salary: 60000,
+                                   
+                         salary: 60000,
     
-                                subordinates: []
-                             }
+                               
+                         subordinates: []
+                             },
     
                      ]
     
@@ -40,7 +43,7 @@ const company = {
             },
                 {
     
-                 name: 'David',
+                 name: "David",
     
                 salary: 90000,
     
@@ -54,13 +57,13 @@ const company = {
     
      {
     
-        departmentName: 'Sales',
+        departmentName: "Sales",
     
         employees: [
     
              {
     
-              name: 'Eve',
+              name: "Eve",
     
                   salary: 85000,
     
@@ -68,7 +71,7 @@ const company = {
     
                      {
     
-                             name: 'Frank',
+                             name: "Frank",
     
                         salary: 70000,
     
@@ -82,7 +85,7 @@ const company = {
     
                {
     
-                    name: 'Grace',
+                    name: "Grace",
     
                      salary: 95000,
     
@@ -98,3 +101,15 @@ const company = {
 
 console.log(company)
 // Task 2 Create a Recursive Function to Calculate Total Salary for a Department
+function calculateDepartmentSalary(department) {
+    let totalDepartmentSalary = 0
+ // Recursively calculate the sales for each subordinate
+ for (let employee of department.employees) { 
+totalDepartmentSalary += employee.salary;
+    }
+
+      return totalDepartmentSalary;
+}
+const totalEngineeringSalary = calculateDepartmentSalary(company.departments[0]);
+console.log(totalEngineeringSalary);
+// Task 3 
